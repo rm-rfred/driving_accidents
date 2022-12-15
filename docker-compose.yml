@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./backend/app:/app
+    environment:
+      - BACKEND_CORS_ORIGINS=["http://localhost:3000", "http://localhost:8000"]
