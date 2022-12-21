@@ -9,4 +9,7 @@ services:
     volumes:
       - ./backend/app:/app
     environment:
+      - OPENSEARCH_USERNAME=${OPENSEARCH_USERNAME}
+      - OPENSEARCH_PASSWORD=${OPENSEARCH_PASSWORD}
+      - OPENSEARCH_PORT=${OPENSEARCH_PORT}
       - BACKEND_CORS_ORIGINS=["http://localhost:3000", "http://localhost:8000"]
