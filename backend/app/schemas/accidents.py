@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class AccidentsBase(BaseModel):
+class Accident(BaseModel):
     id_accident: int
     vehicule_letter: str
     year: int
